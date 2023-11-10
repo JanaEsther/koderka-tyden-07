@@ -20,6 +20,29 @@ html { box-sizing: border-box; }
 .kontejner > div:nth-child(5n+3) { background-color: #3498db;}
 .kontejner > div:nth-child(5n+4) { background-color: #e74c3c;}
 .kontejner > div:nth-child(5n+5) { background-color: #9b59b6;}
-
+/*můžeme použít %, auto, 10em(10x velikost písma)
+jednotka fr - fraction -  nejdříve se spočítají sploupce, které jsou v jiných jednotkách než fr a zbývající 
+místo se rozdělí mezi fr, nastaví se jako šířka sloupce
+u řádků je potřeba nastavit výšku. U starších prohlížečů místo gap použít grid-gap*/
 /* ---------------------------------------------------- */
+
+.kontejner{
+    height:600px;
+    display: grid;
+    grid-template-columns: 300px repeat(3,1fr);
+    grid-template-rows: 200px 100px 150px;
+    gap:20px;
+}
+
+/*.bobik{
+    grid-column:  2/-1;
+    grid-row: 2;   
+}
+
+.bob{
+    grid-column: 3;
+    grid-row: 1/ span 3 ;
+}*/
+
+
 
