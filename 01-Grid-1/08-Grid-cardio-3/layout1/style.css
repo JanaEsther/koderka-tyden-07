@@ -1,23 +1,27 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-*, :after, :before { box-sizing: border-box; }
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
 
 body {
-	font: 16px/1.5 sans-serif;
-	margin: 0;
+  font: 16px/1.5 sans-serif;
+  margin: 0;
 }
 
 /* barvicky elementů na stránce */
 header,
 footer {
-	background: yellowgreen;
+  background: yellowgreen;
 }
 
 aside {
-	background: beige;
+  background: beige;
 }
 
 nav {
-	background: lightsteelblue;
+  background: lightsteelblue;
 }
 
 /* -------------------------------------------- */
@@ -25,6 +29,28 @@ nav {
 /* -------------------------------------------- */
 
 .grid {
-	height: 100vh; /* nastavíme výšku gridu přes celou stránku */
+  height: 100vh; /* nastavíme výšku gridu přes celou stránku */
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  grid-template-rows: 15% 70% 15%;
 }
 
+header {
+  grid-column: span 3;
+  grid-row: 1/-4;
+}
+
+nav {
+  grid-column: 2/-3;
+  grid-row: -3/3;
+}
+
+aricle {
+  grid-column: 1/-3;
+  grid-row: 2/-3;
+}
+
+footer {
+  grid-column: span 3;
+  grid-row: 3/-1;
+}
