@@ -7,7 +7,6 @@
 	background-color: #ffffcc;
 }
 
-
 .kontejner > div {
 	font: 30px/1 sans-serif;
 	font-weight: bold;
@@ -27,9 +26,7 @@
 .kontejner > div:nth-child(8n+7) { background-color: #9b59b6;}
 .kontejner > div:nth-child(8n+8) { background-color: #e67e22;}
 
-
 /* ---------------------------------------------------- */
-
 
 /*
 Vyzkoušíme si:
@@ -42,3 +39,21 @@ Vyzkoušíme si:
 	- dense (zabraňuje mezerám)
 - order
 */
+
+.kontejner{
+	height: 900px;
+	display: grid;
+	grid-template-columns: repeat(4 ,200px);
+	grid-template-rows: repeat(3, 200px);
+	justify-items: end;
+	align-items: end;
+	justify-content: center;
+	align-content: center;
+}
+
+.bobik{
+justify-self: center;
+align-self: center;
+}
+
+
